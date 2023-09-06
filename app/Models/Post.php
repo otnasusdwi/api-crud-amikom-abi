@@ -18,5 +18,11 @@ class Post extends Model
         'image',
         'title',
         'content',
+        'id_kategori',
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class, 'id_kategori');
+    }
 }
